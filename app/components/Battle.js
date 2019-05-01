@@ -71,6 +71,7 @@ class Battle extends React.Component {
             [id + 'Image']: `https://github.com/${username}.png?size=200`
         });
     };
+
     handleReset = id => {
         this.setState({
             [id + 'Name']: '',
