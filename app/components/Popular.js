@@ -33,7 +33,7 @@ function RepoGrid({ repos }) {
                             <img
                                 className="avatar"
                                 src={owner.avatar_url}
-                                alt={'Avatar for ' + owner.login}
+                                alt={`Avatar for ${owner.login}`}
                             />
                         </li>
                         <li>

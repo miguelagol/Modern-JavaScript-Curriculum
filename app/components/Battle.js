@@ -76,7 +76,7 @@ class Battle extends React.Component {
     handleSubmit(id, username) {
         this.setState({
             [id + 'Name']: username,
-            [id + 'Image']: 'https://github.com/' + username + '.png?size=200'
+            [id + 'Image']: `https://github.com/${username}.png?size=200`
         });
     }
     handleReset(id) {
@@ -152,12 +152,9 @@ class Battle extends React.Component {
                     <Link
                         className="button"
                         to={{
-                            pathname: match.url + '/results',
-                            search:
-                                '?playerOneName=' +
-                                playerOneName +
-                                '&playerTwoName=' +
-                                playerTwoName
+                            pathname: `${match.url}/results`,
+                            search: `?playerOneName=${playerOneName}
+                                    &playerTwoName=${playerTwoName}`
                         }}
                     >
                         Battle
