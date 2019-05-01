@@ -4,7 +4,7 @@ import { fetchPopularRepos } from '../utils/api';
 import Loading from './Loading';
 
 function SelectLanguage({ onSelect, selectedLanguage }) {
-    var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+    const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
     return (
         <ul className="languages">
             {languages.map(lang => (
@@ -77,7 +77,7 @@ class Popular extends React.Component {
         });
 
         fetchPopularRepos(lang).then(repos => {
-            this.setState({ repos: repos });
+            this.setState({ repos });
         });
     }
     render() {

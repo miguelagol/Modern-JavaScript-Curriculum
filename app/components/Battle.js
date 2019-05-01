@@ -14,7 +14,7 @@ class PlayerInput extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(event) {
-        var value = event.target.value;
+        const value = event.target.value;
 
         this.setState({
             username: value
@@ -28,6 +28,7 @@ class PlayerInput extends React.Component {
     render() {
         const { username } = this.state;
         const { label } = this.props;
+
         return (
             <form className="column" onSubmit={this.handleSubmit}>
                 <label className="header" htmlFor="username">
@@ -71,21 +72,17 @@ class Battle extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     handleSubmit(id, username) {
-        this.setState(() => {
-            var newState = {};
-            newState[id + 'Name'] = username;
-            newState[id + 'Image'] =
-                'https://github.com/' + username + '.png?size=200';
-            return newState;
+        this.setState({
+            [id + 'Name']: username,
+            [id + 'Image']: 'https://github.com/' + username + '.png?size=200'
         });
     }
     handleReset(id) {
-        this.setState(() => {
-            var newState = {};
-            newState[id + 'Name'] = '';
-            newState[id + 'Image'] = null;
-            return newState;
+        this.setState({
+            [id + 'Name']: '',
+            [id + 'Image']: null
         });
     }
     render() {

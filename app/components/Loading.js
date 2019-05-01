@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-var styles = {
+const styles = {
     content: {
         textAlign: 'center',
         fontSize: '35px'
