@@ -1,8 +1,8 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
-    entry: './app/index.js',
+module.exports = {
+    entry: ['@babel/polyfill', './app/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
